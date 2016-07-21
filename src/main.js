@@ -22,26 +22,32 @@ $(document).ready(function() {
 
   //colors, make loop
 
-  $('.color:nth-child(1)').on('click', function() {
+  $('.color').on('click', function() {
     $('.color').css('border', 'none');
+    var position = $(this).index();
     $(this).css('border', '2px solid black');
+    console.log(position);
 
-    $('.box').on('click', function() {
-      $(this).css('background-color', colors[0]);
+    $('.color:nth-child(' + position + ')').on('click', function() {
+
+
+      $('.box').on('click', function() {
+        $(this).css('background-color', colors[position-1]);
+      });
+
+      $('.canvas > .box').mousedown(function() {
+         isDown = true;
+       })
+      $('.canvas > .box').mouseup(function() {
+         isDown = false;
+       });
+
+      $(".canvas > .box").mouseover(function() {
+        if(isDown) {
+          $(this).css('background-color', colors[position-1]);
+        }
+       });
     });
-
-    $('.canvas > .box').mousedown(function() {
-       isDown = true;      // When mouse goes down, set isDown to true
-     })
-    $('.canvas > .box').mouseup(function() {
-       isDown = false;    // When mouse goes up, set isDown to false
-     });
-
-    $(".canvas > .box").mouseover(function() {
-      if(isDown) {        // Only change css if mouse is down
-        $(this).css('background-color', colors[0]);
-      }
-     });
   });
 
   // $('.color:nth-child(2)').on('click', function() {
