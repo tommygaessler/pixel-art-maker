@@ -1,7 +1,7 @@
 $(document).ready(function() {
   console.log('test');
 
-  var colors = ['red', 'blue', 'green', 'orange', 'purple'];
+  var colors = ['red', 'blue', 'green', 'orange', 'purple', 'pink'];
   var isDown = false;
 
   for (var i = 0; i < 1232; i++) {
