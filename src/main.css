@@ -30,10 +30,23 @@
   margin-right: 0;
 }
 
+.buttons
+{
+  text-align: center;
+}
+
+.clear
+{
+  margin: auto;
+  display: inline-block;
+  margin-right: 7.5px;
+}
+
 .erase
 {
   margin: auto;
-  display: block;
+  display: inline-block;
+  margin-left: 7.5px;
 }
 
 form
