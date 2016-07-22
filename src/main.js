@@ -1,10 +1,10 @@
 $(document).ready(function() {
   console.log('test');
 
-  var colors = ['red', 'blue', 'green', 'orange', 'purple'];
+  var colors = ['red', 'blue', 'green'];
   var isDown = false;
 
-  for (var i = 0; i < 1232; i++) {
+  for (var i = 0; i < 1250; i++) {
     $('.canvas').append('<div class="box"></div>')
   }
 
@@ -12,12 +12,9 @@ $(document).ready(function() {
     $('.colors').append('<div class="color" style="background-color:' + colors[i] + '"></div>');
   }
 
-  // clear button
-
-  $('.erase').append('<button class="clear">Clear</button>');
-
-  $('.clear').on('click', function() {
+  $('.erase').on('click', function() {
     $('.box').css('background-color', 'white');
+    $('.color').css('border', 'none');
   });
 
   //colors, make loop

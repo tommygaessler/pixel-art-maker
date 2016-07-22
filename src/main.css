@@ -1,13 +1,9 @@
-.canvas
-{
-  position: relative;
-}
-
 .box
 {
   border: 1px solid gray;
   float: left;
   width: 2%;
+  height: 2%;
   padding-bottom: 2%;
 }
 
@@ -17,24 +13,40 @@
   margin: auto;
   text-align: center;
   cursor: pointer;
-  position: relative;
-  top: 50px;
 }
 
 .color
 {
-  width: 10%;
-  float: left;
-  padding-bottom: 10%;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  padding: 25px;
   border-radius: 50%;
+  margin-right: 10px;
 }
 
-.clear
+.color:last-of-type
 {
-  display: block;
-  cursor: pointer;
+  margin-right: 0;
+}
+
+.erase
+{
   margin: auto;
-  clear: both;
-  position: relative;
-  top: 60px;
+  display: block;
+}
+
+form
+{
+  float: right;
+}
+
+h1
+{
+  display: inline;
+}
+
+.row
+{
+  margin-top: 15px;
 }
